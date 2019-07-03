@@ -27,13 +27,13 @@ module "etcd" {
 
 ### Inputs
 
-| Input              | Description                    | Type   | default                     | Required |
-|--------------------|--------------------------------|--------|-----------------------------|----------|
-| hostname           | Hostname of the instance       | string | etcd-staging                | yes      |
-| subnet_ids         | Multizone subnet IDs           | list   | n/a                         | yes      |
-| route53_zone_id    | Route53 hosted zone id         | string | n/a                         | yes      |
-| count              | Number of ETCD nodes           | int    | 3                           | no       |
-| key_name           | The access key name            | string | Gengo-DevOps                | no       |
-| instance_type      | EC2 instance type              | string | t2.medium                   | no       |
-| security_group_ids | Security groups of the nodes   | list   | []                          | no       |
-| cookbooks_dir      | Local chef cookbooks directory | string | /src/devops-tools/daidokoro | no       |
+| Input              | Description                                                | Type   | default                     | Required |
+|--------------------|------------------------------------------------------------|--------|-----------------------------|----------|
+| hostname           | Hostname of the instance                                   | string | etcd-staging                | yes      |
+| subnet_ids         | Multizone subnet IDs. All subnets must be in the same VPC  | list   | n/a                         | yes      |
+| route53_zone_id    | Route53 hosted zone id                                     | string | n/a                         | yes      |
+| count              | Number of ETCD nodes                                       | int    | 3                           | no       |
+| key_name           | The access key name                                        | string | yoursshkeyname              | no       |
+| instance_type      | EC2 instance type                                          | string | t2.medium                   | no       |
+| security_group_ids | Security groups of the nodes                               | list   | []                          | no       |
+| cookbooks_dir      | Local chef cookbooks directory                             | string | /src/devops-tools/daidokoro | no       |
